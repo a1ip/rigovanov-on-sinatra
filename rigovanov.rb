@@ -6,8 +6,14 @@ require 'rubygems'
 
 require 'sinatra'
 require 'haml'
+configure :production do
+  # Configure stuff here you'll want to
+  # only be run at Heroku at boot
+  set :haml, :format => :html5 # default Haml format is :xhtml
+  # TIP:  You can get you database information
+  #       from ENV['DATABASE_URI'] (see /env route below)
+end
 
-set :haml, :format => :html5 # default Haml format is :xhtml
 
 get '/' do
   haml :index
