@@ -26,7 +26,7 @@ __END__
 @@ layout
 %html
   %head
-  = yield
+    = yield
   %body
 
 # @@ index
