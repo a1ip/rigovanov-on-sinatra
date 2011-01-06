@@ -18,3 +18,14 @@ end
 get '/' do
   haml :index
 end
+
+enable :inline_templates
+
+__END__
+
+@@ layout
+%html
+= yield
+
+# @@ index
+# %div.title Hello world!!!!!
