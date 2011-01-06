@@ -19,6 +19,17 @@ get '/' do
   haml :index
 end
 
+get '/ru/' do
+  haml :index
+end
+
+get '/en/' do
+  haml :index.en
+end
+
+# @@ index
+# %div.title Hello world!!!!!
+
 enable :inline_templates
 
 __END__
@@ -29,5 +40,4 @@ __END__
     = yield
   %body
 
-# @@ index
-# %div.title Hello world!!!!!
+
