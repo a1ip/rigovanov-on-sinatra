@@ -25,7 +25,9 @@ __END__
 
 @@ layout
 %html
-= yield
+  %head
+  = yield
+  %body
 
 # @@ index
 # %div.title Hello world!!!!!
