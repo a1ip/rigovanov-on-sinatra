@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'rubygems'
 
 # If you're using bundler, you will need to add these 2 lines
@@ -16,14 +17,17 @@ end
 
 
 get '/' do
+  @title = 'Моя персональная страничка'
   haml :index
 end
 
 get '/ru/' do
+  @title = 'Моя персональная страничка'
   haml :index
 end
 
 get '/en/' do
+  @title = 'My personal page'
   haml :index.en
 end
 
@@ -37,7 +41,8 @@ __END__
 @@ layout
 %html
   %head
-    = yield
+    %title 
+      = @title
   %body
-
+  = yield
 
