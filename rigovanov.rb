@@ -43,6 +43,9 @@ __END__
   %head
     %title 
       = @title
+    %meta{:charset => 'utf-8'}
+    %meta{:name => 'author', :content => 'Филипп Юрьевич Ригованов'}
+    %meta{:name => 'robots', :content => 'index, follow'}
   %body
-  = yield
+    = yield
 
