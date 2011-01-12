@@ -46,7 +46,6 @@ __END__
     %meta{:charset => 'utf-8'}
     %meta{:name => 'author', :content => 'Филипп Юрьевич Ригованов'}
     %meta{:name => 'robots', :content => 'index, follow'}
-    %meta{:name => 'google-site-verification', :content => 'Nug-F4tqpLW7uI5iTleT6qzVCWWYfPhQUTosxdD6t28'}
   %body
     = yield
     / Yandex.Metrika counter
