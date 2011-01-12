@@ -48,4 +48,22 @@ __END__
     %meta{:name => 'robots', :content => 'index, follow'}
   %body
     = yield
+    / Yandex.Metrika counter
+    %div{:style => "display:none;"}
+      :javascript
+        (function(w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter3224089 = new Ya.Metrika(3224089);
+                     yaCounter3224089.clickmap(true);
+                     yaCounter3224089.trackLinks(true);
+
+                } catch(e) {}
+            });
+        })(window, 'yandex_metrika_callbacks');
+    %script{:defer => "defer", :src => "//mc.yandex.ru/metrika/watch.js", :type => "text/javascript"}
+    %noscript
+      %div{:style => "position:absolute"}
+        %img{:alt => "", :src => "//mc.yandex.ru/watch/3224089"}/
+    / /Yandex.Metrika counter
 
