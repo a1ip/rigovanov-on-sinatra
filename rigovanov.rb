@@ -17,18 +17,18 @@ end
 
 
 get '/' do
-  @title = 'Моя персональная страничка'
+  @lang = :ru
   haml :index
 end
 
-get '/ru/' do
-  @title = 'Моя персональная страничка'
+get '/ru/*' do
+  @lang = :ru
   haml :index
 end
 
-get '/en/' do
-  @title = 'My personal page'
-  haml :index.en
+get '/en/*' do
+  @lang = :en
+  haml :index_en
 end
 
 # @@ index
@@ -42,7 +42,11 @@ __END__
 %html
   %head
     %title 
-      = @title
+      - case @lang
+      - when :ru
+        = "Моя персональная страничка"
+      - when :en
+        = "My personal page"
     %meta{:charset => 'utf-8'}
     %meta{:name => 'author', :content => 'Филипп Юрьевич Ригованов'}
     %meta{:name => 'robots', :content => 'index, follow'}
@@ -66,4 +70,3 @@ __END__
       %div{:style => "position:absolute"}
         %img{:alt => "", :src => "//mc.yandex.ru/watch/3224089"}/
     / /Yandex.Metrika counter
-
