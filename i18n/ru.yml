@@ -4,3 +4,7 @@ post:
 
 html: !!html
   <b>Не escape HTML</b>
+
+page:
+  title: Моя персональная страничка
+  author: Филипп Юрьевич Ригованов

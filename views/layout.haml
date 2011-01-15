@@ -1,8 +1,8 @@
 %html
   %head
-    %title test
+    %title= t.page.title
     %meta(charset="utf-8")
-    %meta(name="author" content="#{t.post.friends}")
+    %meta(name="author" content="#{t.page.author} philippe.rigovanov@yandex.com")
     %meta(name="robots" content="index, follow")
   %body
     = yield
