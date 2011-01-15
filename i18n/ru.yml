@@ -1,0 +1,6 @@
+post:
+  friends: Пост только для друзей
+  tags: Пост tags is %1
+
+html: !!html
+  <b>Не escape HTML</b>
